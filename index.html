@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personal Books Record</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+      integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Personal Books Record</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" id="searchTxt" type="search" placeholder="Search"
+                    aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+
+    <div id="message"></div>
+
+    <div class="container my-3">
+        <h1 class="my-3"><strong>Personal Book Record Keeper</strong></h1>
+        <form id=recordForm>
+            <div class="form-group row">
+              <label for="" class="col-sm-2 col-form-label">Book Name</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" id="bookName" />
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="" class="col-sm-2 col-form-label"
+                >Author Name</label
+              >
+              <div class="col-sm-10">
+                <input type="text" class="form-control" id="authorName" />
+              </div>
+            </div>
+            <fieldset class="form-group row">
+              <legend class="col-form-label col-sm-2 float-sm-left pt-0">
+                Genre
+              </legend>
+              <div class="col-sm-10">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="gridRadios"
+                    id="fiction"
+                    value="Fiction"
+                    checked
+                  />
+                  <label class="form-check-label" for="gridRadios1">
+                    Fiction
+                  </label>
+                </div>
+                <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="gridRadios"
+                      id="horror"
+                      value="Horror"
+                      checked
+                    />
+                    <label class="form-check-label" for="gridRadios1">
+                      Horror
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="gridRadios"
+                      id="thriller"
+                      value="Thriller"
+                      checked
+                    />
+                    <label class="form-check-label" for="gridRadios1">
+                      Thriller
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="gridRadios"
+                      id="technology"
+                      value="Technology"
+                      checked
+                    />
+                    <label class="form-check-label" for="gridRadios1">
+                      Technology
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="gridRadios"
+                      id="others"
+                      value="Others"
+                      checked
+                    />
+                    <label class="form-check-label" for="gridRadios1">
+                      Others
+                    </label>
+                  </div>
+                
+              </div>
+
+            
+              
+            </fieldset>
+            
+            <div class="form-group row">
+              <div class="col-sm-10">
+                <button type="submit" class="btn btn-primary" id="addBook">Add Book</button>
+              </div>
+            </div>
+          </form>
+      
+    </div>
+
+    <div class="container">
+        <h5>Book List</h5>
+        <table class="table table-striped">
+            <thead>
+              <tr>
+                <th scope="col">Book Name</th>
+                <th scope="col">Author Name</th>
+                <th scope="col">Genre</th>
+              </tr>
+            </thead>
+            <tbody id="tableItems"></tbody>
+          </table>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="script.js"></script>
+  </body>
+</html>
